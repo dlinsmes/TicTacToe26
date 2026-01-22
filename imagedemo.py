@@ -1,5 +1,6 @@
-#pycharm menu - settings - python - interpretter
+#pycharm menu - settings - python - interpreter
 #-install pillow
+#drag duck.jpg into Pycharm Project
 
 from PIL import Image
 
