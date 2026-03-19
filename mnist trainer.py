@@ -27,11 +27,11 @@ model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Flatten())
 
 #hidden layers
-model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
-model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))
+model.add(tf.keras.layers.Dense(128, activation="relu"))
+model.add(tf.keras.layers.Dense(128, activation="relu"))
 
 #number of classifications
-model.add(tf.keras.layers.Dense(10, activation=tf.nn.softmax))
+model.add(tf.keras.layers.Dense(10, activation="softmax"))
 
 model.compile(optimizer = "adam", loss = "sparse_categorical_crossentropy", metrics = ["accuracy"])
 
