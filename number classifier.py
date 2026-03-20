@@ -25,12 +25,11 @@ print(predictions[0])
 #calculate the accuracy percentage of the predictions of the test set
 #for the first 5 incorrect classifications,
 # print the prediction, actual, and show the image
-correct = 0
+incorrect = 0
 for i in range (len(predictions)):
-    if np.argmax(predictions[i]) == test_labels[i]:
-        correct += 1
-    else:
-        if i - correct < 5:
+    if np.argmax(predictions[i]) != test_labels[i]:
+        incorrect += 1
+        if incorrect <= 5:
             print()
             print("guess", np.argmax(predictions[i]))
             print("real", test_labels[i])
@@ -38,4 +37,4 @@ for i in range (len(predictions)):
             plt.show()
 
 print()
-print("accuracy", (correct/len(predictions))*100)
+print("accuracy", ((len(predictions) - incorrect)/len(predictions))*100)
