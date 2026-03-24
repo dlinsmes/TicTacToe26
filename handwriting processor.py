@@ -25,7 +25,7 @@ for filename in os.listdir(directory):
             imFileName = filename[11:14] + "-r" + str(row) + "-c" + str(col) + ".png"
             # print(imFileName)
 
-            numIm.save(f"Digits/"+imFileName, "PNG")
+            numIm.save("Digits/"+imFileName, "PNG")
 
 
 
