@@ -21,9 +21,9 @@ for filename in os.listdir(directory):
             numIm = Image.new("L", [28, 28])
 
             #save the individual preprocessed digit image to the Digits directory
-            print(filename[11:14]) #file number: 118, 199, 120
+            # print(filename[11:14]) #file number: 118, 199, 120
             imFileName = filename[11:14] + "-r" + str(row) + "-c" + str(col) + ".png"
-            print(imFileName)
+            # print(imFileName)
 
             numIm.save(f"Digits/"+imFileName, "PNG")
 
