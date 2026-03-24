@@ -10,6 +10,9 @@ for filename in os.listdir(directory):
 
     px = im.load()
 
+    #take the image of each 7 x 10 sheet and cut up each individual grid box
+    #then preprocess according to mnist standard (see slides)
+
     #crop out the border white
 
     for row in range(7):
@@ -29,8 +32,6 @@ for filename in os.listdir(directory):
 
 
 
-    #take the image of the 7 x 10 sheet and cut up each individual grid box
-    #then preprocess according to mnist standard (see slides)
 
     #for loop syntax for setting an initial value and increment
     #starting value is -5, condition is < 10, increment is += 2
