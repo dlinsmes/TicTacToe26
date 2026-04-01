@@ -34,8 +34,8 @@ random.shuffle(data)
 
 imData = []
 imLabels = []
-for features, label in data:
-    imData.append(features)
+for image, label in data:
+    imData.append(image)
     imLabels.append(label)
 
 imData = np.array(imData)
