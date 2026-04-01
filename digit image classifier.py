@@ -14,7 +14,7 @@ for imFile in os.listdir(imDirectory):
     classification = int(imFile[len(imFile)-5])
 
     #read pixel data, scale [0,255] to [0,1]
-    img_array = np.array(Image.open(os.path.join(imDirectory, imfile)))
+    img_array = np.array(Image.open(os.path.join(imDirectory, imFile)))
     img_array = img_array / 255
 
     data.append([img_array, classification])
