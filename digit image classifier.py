@@ -8,10 +8,10 @@ import tensorflow as tf
 imDirectory = "Digits"
 data = []
 
-for imfile in os.listdir(imDirectory):
+for imFile in os.listdir(imDirectory):
 
     #get what number the image is of
-    classification = int(imfile[len(imfile)-5])
+    classification = int(imFile[len(imFile)-5])
 
     #read pixel data, scale [0,255] to [0,1]
     img_array = np.array(Image.open(os.path.join(imDirectory, imfile)))
